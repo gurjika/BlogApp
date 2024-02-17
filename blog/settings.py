@@ -77,6 +77,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'blog.wsgi.application'
 
 
+
+PASSWORD = os.getenv('PASSWORD')
+USER = os.getenv('USER')
+
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -85,8 +90,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blogs',
         'HOST': 'localhost',
-        'USER': 'gurjika',
-        'PASSWORD': 'Lukikosi7680BGH',
+        'USER': USER,
+        'PASSWORD': PASSWORD,
     }
 }
 
